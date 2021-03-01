@@ -1,0 +1,17 @@
+{
+    "name": "codecool-curriculum/can-a-match-box",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Logistics\\": "src/",
+            "Logistics\\Test\\": "tests/"
+        }
+    },
+    "prefer-stable": true,
+    "require": {
+        "php": ">=7.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9"
+    }
+}
