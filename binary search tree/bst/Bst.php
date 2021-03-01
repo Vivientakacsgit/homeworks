@@ -25,33 +25,20 @@ class Bst
         if(count($leftTree) <= 1){
             if(count($leftTree) != 0){
                 $node->setLeft(new Node($leftTree[0]));
-
-
             }
-
-
         }else{
             $node->setLeft($this->buildTree($leftTree));
-
-
         }
         if(count($rightTree) <= 1){
             if(count($rightTree) != 0){
                 $node->setRight(new Node($rightTree[0]));
-
-
             }
-
         }else{
             $node->setRight($this->buildTree($rightTree));
-
-
         }
         return $node;
 
     }
-
-
 
     private function getLeftTree($values)
     {
@@ -62,22 +49,18 @@ class Bst
         for($i=0; $i < $mid;$i++ ){
             array_push($leftTree,$values[$i]);
         }
-
         return $leftTree;
-
     }
 
     private function getRightTree($values)
     {
         $rightTree = array();
-
         $end = count($values)-1;
         $start = 0;
         $mid= floor(($start + $end)/2);
         for($i=$mid+1; $i < count($values);$i++ ){
             array_push($rightTree,$values[$i]);
         }
-
         return $rightTree;
     }
 
@@ -89,13 +72,9 @@ class Bst
     }
 
     public function search($value){
-
-
         $actualNode = $this->rootNode;
 
         while(true) {
-
-
             if ($actualNode->getValue() == $value) {
                 echo "found";
                 return  false;
@@ -108,25 +87,16 @@ class Bst
                     echo " not found";
                     return  false;
                 }
-
-
             } else {
 
                 $actualNode = $actualNode->getRight();
                 if($actualNode == null){
-
                     echo " not found";
                     return  false;
                 }
             }
-
         }
-
-
             return $actualNode;
-
-
-
     }
 
 }
